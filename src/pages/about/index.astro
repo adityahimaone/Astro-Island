@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+---
+
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<Layout title="About">
+    <main
+        style="display: flex;height: 2500px;flex-direction: column; justify-content: space-between;"
+    >
+        <!-- Use the Components as you are used to Astro serves an HTML Superset that feels much like JSX -->
+        <!-- we use the client:visible directive to tell Astro to load the javascript when the Component(s) come into our viewPort -->
+        <Card href="/" title="Kembali" body="Klik halaman ini untuk kembali" />
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+</style>
+<script>
+    // $(document).ready(function(){
+    //     alert('Hello World');
+    // });
+</script>
